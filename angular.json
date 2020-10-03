@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "dukkan-app"
+  "defaultProject": "dukkan-app",
+  "cli": {
+    "analytics": "0799e1ae-0434-4d92-84e8-684eb9c57bd1"
+  }
 }
