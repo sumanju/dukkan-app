@@ -8,13 +8,14 @@ import { LandingComponentComponent }  from './landing-component/landing-componen
 import { LoginSignpComponent }        from './login-signp/login-signp.component'
 
 const routes: Routes = [
-  { path      : COMPONENTS_ROUTES.LandingComp, 
-    component : LoginSignpComponent
+  { path      : COMPONENTS_ROUTES.LoginSignup, 
+    component : LoginSignpComponent,
+    outlet    : 'loginsignup'
   },
   { path      : COMPONENTS_ROUTES.LandingComp ,
     component : LandingComponentComponent
   }, 
-  { path          : MODULE_ROUTES.UserInfo  ,
+  { path          : MODULE_ROUTES.UserInfo,
     loadChildren  : ()  =>  import('./user-info/user-info.module').then(m => m.UserInfoModule)
   }
 ]

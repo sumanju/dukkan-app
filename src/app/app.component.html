@@ -1,3 +1,5 @@
-<app-side-nav>
+<app-side-nav *ngIf="userId">
   <router-outlet></router-outlet>
 </app-side-nav>
+
+<router-outlet *ngIf="!userId" name="loginsignup"></router-outlet>
