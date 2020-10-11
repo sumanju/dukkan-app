@@ -1,3 +1,8 @@
+/*
+  This service is used for storing data into client system.
+  basically we are using local and session storage.
+*/
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
