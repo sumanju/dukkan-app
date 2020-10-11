@@ -1,4 +1,4 @@
-import { Component }        from '@angular/core';
+import { Component, ViewChild }        from '@angular/core';
 import { BreakpointObserver, 
          Breakpoints 
        }                    from '@angular/cdk/layout';
@@ -12,6 +12,8 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class SideNavComponent {
 
+  @ViewChild('drawer') drawer : any
+ 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -19,5 +21,12 @@ export class SideNavComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  closeSideBar()  {
+    this.isHandset$.subscribe(resp => {
+      if (resp) 
+        this.drawer.close()
+    })
+  }
 
 }
