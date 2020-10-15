@@ -14,7 +14,7 @@ export const COMPONENTS_ROUTES = {
 }
 
 export const LAZY_ROUTES  = {
-  // Root level changes
+  // Root level routes
   LoginSignup       : `${COMPONENTS_ROUTES.LandingComp}`,
   LandingPage       : `${COMPONENTS_ROUTES.LandingComp}`,
 
