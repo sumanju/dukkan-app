@@ -20,10 +20,10 @@ const app = express()
         next()
       })
 
-app.use(express.static(path.join(__dirname, "./dist/dukkan-app/")))
+app.use(express.static(path.join(__dirname, "./dist/project-app/")))
 
 app.get('*', function(req,res) {
-  res.sendFile(path.join(__dirname,'./dist/dukkan-app/index.html'))
+  res.sendFile(path.join(__dirname,'./dist/project-app/index.html'))
 })
 
 const port = process.env.PORT || 5000

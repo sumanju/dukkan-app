@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dukkan-app": {
+    "project-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dukkan-app",
+            "outputPath": "dist/project-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dukkan-app:build"
+            "browserTarget": "project-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dukkan-app:build:production"
+              "browserTarget": "project-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dukkan-app:build"
+            "browserTarget": "project-app:build"
           }
         },
         "test": {
@@ -116,18 +116,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "dukkan-app:serve"
+            "devServerTarget": "project-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dukkan-app:serve:production"
+              "devServerTarget": "project-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "dukkan-app",
+  "defaultProject": "project-app",
   "cli": {
     "analytics": "0799e1ae-0434-4d92-84e8-684eb9c57bd1"
   }
