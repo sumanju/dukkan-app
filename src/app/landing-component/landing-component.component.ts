@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LAZY_ROUTES } from '../framework';
 
 @Component({
   selector: 'app-landing-component',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private r : Router) { }
 
   ngOnInit(): void {
   }

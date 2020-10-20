@@ -7,7 +7,8 @@ export const MODULE_ROUTES =  {
 }
 
 export const COMPONENTS_ROUTES = {
-  LoginSignup       : 'full',
+  Loading           : '',
+  LoginSignup       : 'loginsignup',
   LandingComp       : 'landingPage',
   UserProfile       : 'userProfile',
   UserRegistration  : 'userRegistration'
@@ -15,7 +16,8 @@ export const COMPONENTS_ROUTES = {
 
 export const LAZY_ROUTES  = {
   // Root level routes
-  LoginSignup       : `${COMPONENTS_ROUTES.LandingComp}`,
+  Loading           : `${COMPONENTS_ROUTES.Loading}`,
+  LoginSignup       : `${COMPONENTS_ROUTES.LoginSignup}`,
   LandingPage       : `${COMPONENTS_ROUTES.LandingComp}`,
 
   // Lazy Module routes

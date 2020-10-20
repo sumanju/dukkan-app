@@ -11,7 +11,8 @@ import { FormsModule }                    from '@angular/forms';
 import { SideNavComponent }               from './side-nav/side-nav.component';
 import { LandingComponentComponent }      from './landing-component/landing-component.component';
 import { LoginSignupComponentComponent }  from './login-signup-component/login-signup-component.component';
-import { TranslatePipe } from './framework/translation/translate.pipe';
+import { TranslatePipe }                  from './framework/translation/translate.pipe';
+import { AppLoadingComponent }            from './app-loading/app-loading.component';
 
 @NgModule({
   declarations  : [
@@ -19,7 +20,8 @@ import { TranslatePipe } from './framework/translation/translate.pipe';
     SideNavComponent,
     LandingComponentComponent,
     LoginSignupComponentComponent,
-    TranslatePipe
+    TranslatePipe,
+    AppLoadingComponent
   ],
   imports       : [
     BrowserModule,
