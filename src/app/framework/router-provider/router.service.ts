@@ -23,7 +23,7 @@ export class RouterService {
 
   constructor(private router : Router) { }
 
-  navigate(routeName : string, routeParams : object)  {
+  navigate(routeName : string, routeParams ?: object)  {
     this.urlStack.push({
       urlString   : routeName,
       queryParams : routeParams
