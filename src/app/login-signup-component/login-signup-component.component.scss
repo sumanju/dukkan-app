@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-sign-cont {
+  width: min(80vw, 400px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh;
+}
+
+.primary-input-box {
+  width: calc(100% - 20px);
+  border: 1px solid;
+  height: 4vh;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 1vh 0;
+  background-color: none;
+}
+
+.toggle-mode {
+  margin: 4vh 0 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}

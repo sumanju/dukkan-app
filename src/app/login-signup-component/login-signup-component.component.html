@@ -1,1 +1,74 @@
-<p>login-signup-component works!</p>
+<div class="init-background content">
+  
+  <div class="login-sign-cont shadow-box" 
+       *ngIf="mode === MODE.LOGIN"
+       [formGroup]="loginForm">  
+
+    <div class="txt-xl-bld-dark"
+         style="margin: 0 0 1vh;">
+         Login
+    </div>
+
+    <input type="text" 
+           placeholder="username"
+           class="primary-input-box"
+           formControlName="userId">
+
+    <input type="password" 
+           placeholder="password"
+           class="primary-input-box"
+           formControlName="password">
+
+    <button style="margin-top: 2vh;"
+            [ngClass]="loginForm.valid ? 'primary-button-act' : 'primary-button-inact'"
+            [disabled]="!loginForm.valid"
+            (click)="proceed()"> 
+            Log In 
+    </button>
+
+    <div class="txt-md-med-norm toggle-mode"
+         (click)="changeMode()">
+      <u> Sign Up </u>
+    </div>
+
+  </div>
+
+  <div class="login-sign-cont shadow-box"
+       *ngIf="mode === MODE.SIGNUP"
+       [formGroup]="signupForm">
+
+    <div class="txt-xl-bld-dark"
+         style="margin: 0 0 1vh;">
+         Sign Up
+    </div>
+
+    <input type="text" 
+           placeholder="username"
+           class="primary-input-box"
+           formControlName="userId">
+
+    <input type="number" 
+           placeholder="contact"
+           class="primary-input-box"
+           formControlName="mobile">
+
+    <input type="password" 
+           placeholder="password"
+           class="primary-input-box"
+           formControlName="password">
+
+    <button style="margin-top: 2vh;"
+            [ngClass]="signupForm.valid ? 'primary-button-act' : 'primary-button-inact'"
+            [disabled]="!signupForm.valid"
+            (click)="proceed()"> 
+            Sign Up 
+    </button>
+
+    <div class="txt-md-med-norm toggle-mode"
+         (click)="changeMode()">
+      <u> Login </u>
+    </div>
+
+  </div>
+
+</div>
