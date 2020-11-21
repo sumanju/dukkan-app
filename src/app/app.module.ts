@@ -15,6 +15,7 @@ import { LandingComponentComponent }      from './landing-component/landing-comp
 import { LoginSignupComponentComponent }  from './login-signup-component/login-signup-component.component';
 import { TranslatePipe }                  from './framework/translation/translate.pipe';
 import { AppLoadingComponent }            from './app-loading/app-loading.component';
+import { AppCommonModule }                from './app-common/app-common.module'
 
 @NgModule({
   declarations  : [
@@ -32,7 +33,8 @@ import { AppLoadingComponent }            from './app-loading/app-loading.compon
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppCommonModule
   ],
   providers   : [],
   schemas     : [NO_ERRORS_SCHEMA],
