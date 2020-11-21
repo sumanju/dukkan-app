@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { LAZY_ROUTES } from '../framework';
+import { LAZY_ROUTES, RouterService } from '../framework';
 
 @Component({
   selector: 'app-landing-component',
@@ -9,9 +8,12 @@ import { LAZY_ROUTES } from '../framework';
 })
 export class LandingComponentComponent implements OnInit {
 
-  constructor(private r : Router) { }
+  constructor(private router : RouterService) { }
 
   ngOnInit(): void {
   }
 
+  some()  {
+    this.router.navigate(LAZY_ROUTES.UserProfile)
+  }
 }

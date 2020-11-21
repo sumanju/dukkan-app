@@ -12,3 +12,8 @@ export enum API_STATE {
   PROGRESS  = 'PROGRESS',
   SUCCESS   = 'SUCCESS'
 }
+
+export enum SIDE_NAV  {
+  ONE = 'ONE',
+  TWO = 'TWO'
+}

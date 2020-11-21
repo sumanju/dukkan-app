@@ -1,7 +1,10 @@
 import { Component, 
          OnInit 
        }                from '@angular/core'
-import { API_STATE }    from '../framework'
+import { API_STATE, 
+         RouterService, 
+         COMPONENTS_ROUTES
+       }                from '../framework'
 import { FormBuilder, 
          FormGroup, 
          Validators 
@@ -29,7 +32,8 @@ export class LoginSignupComponentComponent implements OnInit {
   loginForm   : FormGroup                 
   signupForm  : FormGroup          
 
-  constructor(private fb  : FormBuilder) {
+  constructor(private fb      : FormBuilder,
+              private router  : RouterService) {
 
     this.loginForm  = this.fb.group({
       userId    : ['',  Validators.required],
@@ -65,6 +69,7 @@ export class LoginSignupComponentComponent implements OnInit {
   }
 
   proceed() {
+    this.router.navigate(COMPONENTS_ROUTES.LandingComp)
   }
 
 }
