@@ -1,0 +1,49 @@
+[debug] [2020-11-27T16:22:22.825Z] ----------------------------------------------------------------------
+[debug] [2020-11-27T16:22:22.827Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2020-11-27T16:22:22.827Z] CLI Version:   8.16.2
+[debug] [2020-11-27T16:22:22.827Z] Platform:      linux
+[debug] [2020-11-27T16:22:22.827Z] Node Version:  v10.22.1
+[debug] [2020-11-27T16:22:22.827Z] Time:          Fri Nov 27 2020 21:52:22 GMT+0530 (India Standard Time)
+[debug] [2020-11-27T16:22:22.827Z] ----------------------------------------------------------------------
+[debug] [2020-11-27T16:22:22.827Z] 
+[debug] [2020-11-27T16:22:22.833Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-27T16:22:22.833Z] > authorizing via signed-in user
+[debug] [2020-11-27T16:22:22.833Z] [iam] checking project shopifybuzz for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-11-27T16:22:22.836Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shopifybuzz:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2020-11-27T16:22:24.714Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 27 Nov 2020 16:22:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1169","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-27T16:22:24.724Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/shopifybuzz  
+ 
+[debug] [2020-11-27T16:22:25.520Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 27 Nov 2020 16:22:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-27T16:22:25.522Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/shopifybuzz  
+ 
+[debug] [2020-11-27T16:22:26.238Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 27 Nov 2020 16:22:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'shopifybuzz'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2020-11-27T16:22:26.249Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/shopifybuzz/locations/-/instances/shopifybuzz  
+ 
+[debug] [2020-11-27T16:22:27.162Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 27 Nov 2020 16:22:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-27T16:22:27.168Z] >>> HTTP REQUEST PUT https://shopifybuzz.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2020-11-27T16:22:28.800Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Fri, 27 Nov 2020 16:22:28 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] ✔  database: rules syntax for database shopifybuzz is valid 
+[debug] [2020-11-27T16:22:28.806Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopifybuzz/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-27T16:22:31.055Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 27 Nov 2020 16:22:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[shopifybuzz]: beginning deploy... 
+[info] i  hosting[shopifybuzz]: found 12 files in dist/project-app 
+[debug] [2020-11-27T16:22:31.128Z] [hosting] hash cache [ZGlzdC9wcm9qZWN0LWFwcA] stored for 12 files
+[debug] [2020-11-27T16:22:31.129Z] [hosting][hash queue][FINAL] {"max":55,"min":12,"avg":20.416666666666668,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":61}
+[debug] [2020-11-27T16:22:31.129Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopifybuzz/versions/a843772991fb9fa1:populateFiles  
+ <request body omitted>
+[debug] [2020-11-27T16:22:33.305Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 27 Nov 2020 16:22:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-27T16:22:33.313Z] [hosting][populate queue][FINAL] {"max":2181,"min":2181,"avg":2181,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2186}
+[debug] [2020-11-27T16:22:33.314Z] [hosting] uploads queued: 2
