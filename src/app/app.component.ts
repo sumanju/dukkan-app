@@ -16,10 +16,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.fullScreen = {
-      height  : screen.height + 'px',
-      width   : screen.width + 'px'
-    }
   }
 
 }
